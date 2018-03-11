@@ -54,6 +54,15 @@ app.get('/about', (req,res) =>{
   });
 });
 
+app.get('/projects', (req,res) =>{
+  //res.send('About Page !');
+  res.render('projects.hbs',{
+    pageTitle: 'This is my Projects Page',
+    pageHeader: 'This is my node express Projects Page',
+    pageContent: 'Welcome to My Heroku Projects page'
+  });
+});
+
 app.get('/bad', (req,res) =>{
   res.send({
     errorMessage: 'Not able to llaod the page',
